@@ -1,0 +1,120 @@
+{
+    "name": "ehl-git-commit-plugin",
+    "displayName": "ehl-git-commit-plugin",
+    "description": "按ehl代码规范在git生成说明并自动提交",
+    "version": "1.3.0",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "publisher": "redjue",
+    "license": "MIT",
+    "homepage": "https://github.com/RedJue/git-commit-plugin/blob/master/README.md",
+    "bugs": {
+        "url": "https://github.com/RedJue/git-commit-plugin/issues"
+    },
+    "icon": "assets/logo.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RedJue/git-commit-plugin"
+    },
+    "keywords": [
+        "git",
+        "commit",
+        "vscode"
+    ],
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.showGitCommit"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.showGitCommit",
+                "title": "%extension.showGitCommit.title%",
+                "placeholer": "%extension.showGitCommit.placeholder%",
+                "icon": "$(octoface)"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Ehl Git Commit Plugin",
+            "properties": {
+                "EhlGitCommitPlugin.ShowEmoji": {
+                    "type": "boolean",
+                    "default": true,
+                    "markdownDescription": "%extension.configuration.EhlGitCommitPlugin.ShowEmoji.markdownDescription%"
+                },
+                "EhlGitCommitPlugin.CustomCommitType": {
+                    "type": "array",
+                    "default": [],
+                    "items": {
+                        "type": [
+                            "object",
+                            "string"
+                        ]
+                    },
+                    "markdownDescription": "%extension.configuration.EhlGitCommitPlugin.CustomCommitType.markdownDescription%",
+                    "scope": "resource"
+                },
+                "EhlGitCommitPlugin.MaxSubjectCharacters": {
+                    "type": "number",
+                    "default": 20,
+                    "markdownDescription": "%extension.configuration.EhlGitCommitPlugin.EhlGitCommitPlugin.MaxSubjectCharacters%"
+                },
+                "EhlGitCommitPlugin.Templates": {
+                    "type": "array",
+                    "default": [],
+                    "markdownDescription": "%extension.configuration.EhlGitCommitPlugin.EhlGitCommitPlugin.Templates%",
+                    "items": [
+                        {
+                            "templateName": "Ehl",
+                            "templateContent": "<type>(<scope>):<subject><enter><body><enter><footer>"
+                        },
+                        {
+                            "templateName": "git-cz",
+                            "templateContent": "<type>(<scope>):<space><icon><space><subject><enter><body><enter><footer>"
+                        }
+                    ]
+                }
+            }
+        },
+        "menus": {
+            "scm/title": [
+                {
+                    "when": "scmProvider == git",
+                    "command": "extension.showGitCommit",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint src --ext ts --fix",
+        "watch": "tsc -watch -p ./",
+        "build": "vsce package",
+        "pretest": "npm run compile && npm run lint",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^7.0.1",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.42.0",
+        "@typescript-eslint/eslint-plugin": "^2.18.0",
+        "@typescript-eslint/parser": "^2.18.0",
+        "eslint": "^6.8.0",
+        "glob": "^7.1.6",
+        "mocha": "^7.0.1",
+        "typescript": "^3.7.5",
+        "vscode-test": "^1.3.0"
+    },
+    "dependencies": {
+        "vsce": "^1.95.0",
+        "vscode-nls-i18n": "^0.2.4"
+    }
+}
