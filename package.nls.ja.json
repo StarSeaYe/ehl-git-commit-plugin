@@ -22,6 +22,7 @@
     "extension.commitType.init.detail": "プロジェクト初期化",
     "extension.commitType.feat.detail": "新規機能追加",
     "extension.commitType.fix.detail": "バグ修正",
+    "extension.commitType.merge.detail": "merge code",
     "extension.commitType.docs.detail": "ドキュメントのみの変更",
     "extension.commitType.style.detail": "フォーマットの変更（コードの動作に影響しないスペース、フォーマット、セミコロンなど）",
     "extension.commitType.refactor.detail": "リファクタリングのための変更（新規機能やバグ修正を含まない）",

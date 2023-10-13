@@ -22,6 +22,7 @@
     "extension.commitType.init.detail": "項目初始化",
     "extension.commitType.feat.detail": "添加新特性",
     "extension.commitType.fix.detail": "修復bug",
+    "extension.commitType.merge.detail": "代码合并",
     "extension.commitType.docs.detail": "僅僅修改文檔",
     "extension.commitType.style.detail": "僅僅修改了空格、格式縮進、逗號等等，不改變代碼邏輯",
     "extension.commitType.refactor.detail": "代碼重構，沒有加新功能或者修復bug",

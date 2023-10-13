@@ -32,6 +32,12 @@ export default function GetCommitTypes() {
             icon: '🐞',
         },
         {
+            label: 'merge',
+            key: 'merge',
+            detail: localize('extension.commitType.merge.detail'),
+            icon: '⤐',
+        },
+        {
             label: 'docs',
             key: 'docs',
             detail: localize('extension.commitType.docs.detail'),

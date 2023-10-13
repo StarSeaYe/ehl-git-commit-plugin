@@ -2,7 +2,7 @@
     "name": "ehl-git-commit-plugin",
     "displayName": "ehl-git-commit-plugin",
     "description": "按ehl代码规范在git生成说明并自动提交",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "engines": {
         "vscode": "^1.42.0"
     },
