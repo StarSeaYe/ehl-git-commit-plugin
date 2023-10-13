@@ -61,22 +61,27 @@ body 部分是对本次 commit 的详细描述，可以分成多行
 使用vsix包进行安装插件
   ![open](/assets/install.png)
 
-## 安装
+## 使用
 
 1. 点击按钮打开插件
   ![open](/assets/step1.png)
 
+
 2. 选择提交的类型
   ![open](/assets/step2.png)
+
 
 3. 选择分项
   ![open](/assets/step3.png)
 
+
 4. 输入内容分项
   ![open](/assets/step4.png)
 
+
 5. 所有内容输入完成后选择**Complete**完成提交的编写
   ![open](/assets/step5.png)
+  
 
 6. 最后生成提交内容
   ![open](/assets/step6.png)
